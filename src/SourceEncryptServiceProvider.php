@@ -1,4 +1,5 @@
 <?php
+
 namespace JaydeepUkani\LaravelSourceObfuscator;
 
 use Illuminate\Support\ServiceProvider;
