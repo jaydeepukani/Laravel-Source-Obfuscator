@@ -1,6 +1,6 @@
 # Laravel Source Obfuscator
 
-[![StyleCI](https://github.styleci.io/repos/248479627/shield?branch=master)](https://github.styleci.io/repos/248479627)
+[![StyleCI](https://github.styleci.io/repos/848640738/shield?branch=main)](https://github.styleci.io/repos/848640738)
 [![Latest Stable Version](https://poser.pugx.org/jaydeepukani/laravel-source-obfuscator/v/stable)](https://packagist.org/packages/jaydeepukani/laravel-source-obfuscator)
 [![License](https://poser.pugx.org/jaydeepukani/laravel-source-obfuscator/license)](https://github.com/jaydeepukani/Laravel-Source-Obfuscator)
 [![CodeFactor](https://www.codefactor.io/repository/github/jaydeepukani/laravel-source-obfuscator/badge)](https://www.codefactor.io/repository/github/jaydeepukani/laravel-source-obfuscator)

@@ -16,6 +16,8 @@
     "illuminate/support": "^6|^7|^8|^9|^10|^11",
     "ext-bolt": "*"
   },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
   "description": "Laravel Source Obfuscator",
   "license": "MIT",
   "authors": [
@@ -26,7 +28,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "sbamtr\\LaravelSourceEncrypter\\": "src"
+      "JaydeepUkani\\LaravelSourceObfuscator\\": "src"
     }
   },
   "config": {
@@ -36,7 +38,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "sbamtr\\LaravelSourceEncrypter\\SourceEncryptServiceProvider"
+        "JaydeepUkani\\LaravelSourceObfuscator\\SourceEncryptServiceProvider"
       ]
     }
   }
