@@ -1,4 +1,5 @@
 <?php
+
 namespace JaydeepUkani\LaravelSourceObfuscator;
 
 use Illuminate\Console\Command;
@@ -34,9 +35,9 @@ class SourceEncryptCommand extends Command
     {
         if (!extension_loaded('bolt')) {
             $this->error('Please install bolt.so https://phpBolt.com');
-            $this->error('PHP Version ' . phpversion());
-            $this->error('INI file location ' . php_ini_scanned_files());
-            $this->error('Extension dir: ' . ini_get('extension_dir'));
+            $this->error('PHP Version '.phpversion());
+            $this->error('INI file location '.php_ini_scanned_files());
+            $this->error('Extension dir: '.ini_get('extension_dir'));
 
             return 1;
         }
@@ -77,7 +78,7 @@ class SourceEncryptCommand extends Command
                 return 1;
             }
 
-            @File::makeDirectory($destination . '/' . File::dirname($source), 493, true);
+            @File::makeDirectory($destination.'/'.File::dirname($source), 493, true);
             if (File::isFile($source)) {
                 self::encryptFile($source, $destination, $keyLength);
                 continue;
@@ -98,7 +99,7 @@ class SourceEncryptCommand extends Command
     {
         $key = Str::random($keyLength);
         if (File::isDirectory(base_path($filePath))) {
-            if (!File::exists(base_path($destination . $filePath))) {
+            if (!File::exists(base_path($destination.$filePath))) {
                 File::makeDirectory(base_path("$destination/$filePath"), 493, true);
             }
 
@@ -131,7 +132,7 @@ bolt_decrypt( __FILE__ , '$key'); return 0;
         }
         /*$cipher = bolt_encrypt('?> ' . $fileContents, $key);*/
         $cipher = bolt_encrypt($fileContents, $key);
-        File::put(base_path("$destination/$filePath"), $prepend . $cipher);
+        File::put(base_path("$destination/$filePath"), $prepend.$cipher);
 
         unset($cipher);
         unset($fileContents);
